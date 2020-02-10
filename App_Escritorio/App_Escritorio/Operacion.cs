@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace App_Escritorio
 {
@@ -16,13 +17,15 @@ namespace App_Escritorio
         {
             resultado = primer_numero - segundo_numero;
         }
-        public void Multiplicar()
+        public void Multiplicar(int a, int b)
         {
-            resultado = primer_numero * segundo_numero;
+            resultado = a * b;
         }
-        public void Dividir()
+        public void Dividir(TextBox a, TextBox b)
         {
-            resultado = primer_numero /  segundo_numero;
+            int uno = int.Parse(a.Text);
+            int dos = int.Parse(b.Text);
+            resultado = uno /  dos;
         }
     }
 }

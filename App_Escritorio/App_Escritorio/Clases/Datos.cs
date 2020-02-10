@@ -8,11 +8,11 @@ namespace App_Escritorio
 {
     class Datos
     {
-       internal int primer_numero;
-       internal int segundo_numero;
-       internal int resultado;
+       internal double primer_numero;
+       internal double segundo_numero;
+       internal double resultado;
 
-        public int p_primer_numero
+        public double p_primer_numero
         {
             set
             {
@@ -26,7 +26,7 @@ namespace App_Escritorio
                 segundo_numero = value;
             }
         }
-        public int p_resultado
+        public double p_resultado
         {
             get
             {

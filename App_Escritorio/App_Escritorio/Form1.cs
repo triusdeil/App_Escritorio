@@ -16,40 +16,38 @@ namespace App_Escritorio
         {
             InitializeComponent();
         }
-        Operacion Operacion_Suma = new Operacion();
+        Operacion Obj_Operaciones = new Operacion();
         private void btn_Suma_Click(object sender, EventArgs e)
         {
-            Operacion_Suma.p_primer_numero = int.Parse(txtNumero1.Text);
-            Operacion_Suma.s_segundo_numero = int.Parse(txtNumero2.Text);
-            Operacion_Suma.Sumar();
-            txtResultado.Text = Operacion_Suma.resultado + "";
+            Obj_Operaciones.p_primer_numero = double.Parse(txtNumero1.Text);
+            Obj_Operaciones.s_segundo_numero = double.Parse(txtNumero2.Text);
+            Obj_Operaciones.Sumar();
+            txtResultado.Text = Obj_Operaciones.resultado + "";
         }
 
-        Operacion Operacion_Resta = new Operacion();
+        
         private void btn_Resta_Click(object sender, EventArgs e)
         {
-            Operacion_Resta.p_primer_numero = int.Parse(txtNumero1.Text);
-            Operacion_Resta.s_segundo_numero = int.Parse(txtNumero2.Text);
-            Operacion_Resta.Restar();
-            txtResultado.Text = Operacion_Resta.resultado + "";
+            Obj_Operaciones.p_primer_numero = int.Parse(txtNumero1.Text);
+            Obj_Operaciones.s_segundo_numero = int.Parse(txtNumero2.Text);
+            Obj_Operaciones.Restar();
+            txtResultado.Text = Obj_Operaciones.resultado + "";
         }
-        Operacion Operacion_Multiplicacion = new Operacion();
+        
 
         private void btn_Multiplicacion_Click(object sender, EventArgs e)
         {
-            Operacion_Multiplicacion.p_primer_numero = int.Parse(txtNumero1.Text);
-            Operacion_Multiplicacion.s_segundo_numero = int.Parse(txtNumero2.Text);
-            Operacion_Multiplicacion.Multiplicar();
-            txtResultado.Text = Operacion_Multiplicacion.resultado + "";
+            int uno = int.Parse(txtNumero1.Text);
+            int dos = int.Parse(txtNumero2.Text);
+            Obj_Operaciones.Multiplicar(uno, dos);
+            txtResultado.Text = Obj_Operaciones.resultado + "";
         }
 
-        Operacion Operacion_Dividir = new Operacion();
+        
         private void btn_Division_Click(object sender, EventArgs e)
         {
-            Operacion_Dividir.p_primer_numero = int.Parse(txtNumero1.Text);
-            Operacion_Dividir.s_segundo_numero = int.Parse(txtNumero2.Text);
-            Operacion_Dividir.Dividir();
-            txtResultado.Text = Operacion_Dividir.resultado + "";
+            Obj_Operaciones.Dividir(txtNumero1, txtNumero2);
+            txtResultado.Text = Obj_Operaciones.resultado + "";
         }
     }
 }
