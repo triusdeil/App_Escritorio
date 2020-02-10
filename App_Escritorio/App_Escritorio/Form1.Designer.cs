@@ -129,6 +129,7 @@
             this.btn_Division.TabIndex = 9;
             this.btn_Division.Text = "Division";
             this.btn_Division.UseVisualStyleBackColor = true;
+            this.btn_Division.Click += new System.EventHandler(this.btn_Division_Click);
             // 
             // Frm_Hotel
             // 

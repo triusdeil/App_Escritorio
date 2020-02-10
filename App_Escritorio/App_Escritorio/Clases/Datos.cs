@@ -33,10 +33,7 @@ namespace App_Escritorio
                 return resultado;
             }
         }
-        public void Suma()
-        {
-            resultado = primer_numero + segundo_numero; 
-        }
+       
 
 
     }
